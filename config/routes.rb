@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+<<<<<<< Updated upstream
+=======
+  root 'homes#Home'
+  get '/Home' => 'homes#HomePage'
+  get '/Permits' => 'homes#Permits'
+  get '/Properties' => 'homes#Properties'
+  get '/Accounts' => 'homes#Accounts'
+>>>>>>> Stashed changes
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
