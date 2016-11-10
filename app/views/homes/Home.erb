@@ -6,6 +6,7 @@
 </head>
 <body>
 <br><br><br><br><br><br><br><br>
+<img src="Img/Logo.png" alt="HFD" style="width:150px;height:150px;"/>
 <form name="login">
 
  <center>Username&nbsp<input type="text" name="userid" placeholder="Nathan"/><br>
@@ -20,7 +21,7 @@
   function check(form) { /*function to check userid & password*/
     /*the following code checkes whether the entered userid and password are matching*/
     if(form.userid.value == "Nathan" && form.pswrd.value == "CMSmart") {
-      window.location.href="manager"/*opens the target page while Id & password matches*/
+      window.location.href="Home"/*opens the target page while Id & password matches*/
     }
     else if(form.userid.value == "Sam" && form.pswrd.value == "SamIAm") {
       window.location.href="portal"/*opens the target page while Id & password matches*/
