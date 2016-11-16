@@ -83,7 +83,27 @@
 <br>
 <br>
 <br>
-<h1> Coming Soon!</h1>
+<h3> Property Location</h3>
+<%= form_tag "/my_controller/update2" do %>
+    <%=label_tag 'Street Number' %>
+    <%= text_field_tag "Street Number", "default info", :maxlength=>"100" %>
+
+    <%=label_tag 'Street Name' %>
+    <%= text_field_tag "Street Name", "default info" %>
+
+    <%=label_tag 'Apt/Suite' %>
+    <%= text_field_tag "Apt/Suite", "default info" %>
+
+    <%=label_tag 'City' %>
+    <%= text_field_tag "City", "default info" %>
+
+    <%=label_tag 'State' %>
+    <%= text_field_tag "State", "default info" %>
+
+    <%=label_tag 'Zip' %>
+    <%= text_field_tag "Zip", "default info" %>
+    <%= submit_tag "Add" %>
+<% end %>
 </body>
 
 </html>

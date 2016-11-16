@@ -82,7 +82,30 @@
 <br>
 <br>
 <br>
-<h1> Coming Soon!</h1>
+<h3> Account Owner</h3>
+<%= form_tag "/my_controller/update2" do %>
+    <%=label_tag 'Last Name' %>
+    <%= text_field_tag 'Last Name', "default info", :maxlength=>"100" %>
+
+    <%=label_tag 'First Name' %>
+    <%= text_field_tag "First Name", "default info" %>
+
+    <%=label_tag 'Middle Name' %>
+    <%= text_field_tag "Middle Name", "default info" %>
+
+    <%=label_tag 'Address' %>
+    <%= text_field_tag "Address", "default info" %>
+
+    <%=label_tag 'City' %>
+    <%= text_field_tag "City", "default info" %>
+
+    <%=label_tag 'State' %>
+    <%= text_field_tag "State", "default info" %>
+
+    <%=label_tag 'Zip' %>
+    <%= text_field_tag "Zip", "default info" %>
+    <%= submit_tag "Add" %>
+<% end %>
 </body>
 
 </html>
