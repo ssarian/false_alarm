@@ -1,0 +1,2 @@
+json.extract! alarm, :id, :permitNum, :beginDate, :endDate, :installDate, :amtDue, :renewalDateTime, :note, :fkPropertyKey, :fkAcctOwnerKey, :fkStatusKey, :fkUserKey, :fkFaSiteTypeKey, :created_at, :updated_at
+json.url alarm_url(alarm, format: :json)

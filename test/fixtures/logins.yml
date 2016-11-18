@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loginDateTime: 2016-11-18 12:55:38
+  fkUserKey: 1
+
+two:
+  loginDateTime: 2016-11-18 12:55:38
+  fkUserKey: 1

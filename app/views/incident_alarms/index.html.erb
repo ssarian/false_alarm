@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Incident Alarms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Importdatetime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incident_alarms.each do |incident_alarm| %>
+      <tr>
+        <td><%= incident_alarm.importDateTime %></td>
+        <td><%= link_to 'Show', incident_alarm %></td>
+        <td><%= link_to 'Edit', edit_incident_alarm_path(incident_alarm) %></td>
+        <td><%= link_to 'Destroy', incident_alarm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incident alarm', new_incident_alarm_path %>

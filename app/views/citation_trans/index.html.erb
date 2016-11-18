@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Citation Trans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transdatetime</th>
+      <th>Fkcitationkey</th>
+      <th>Fkactionkey</th>
+      <th>Fktemplatekey</th>
+      <th>Fkuserkey</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @citation_trans.each do |citation_tran| %>
+      <tr>
+        <td><%= citation_tran.transDateTime %></td>
+        <td><%= citation_tran.fkCitationKey %></td>
+        <td><%= citation_tran.fkActionKey %></td>
+        <td><%= citation_tran.fkTemplateKey %></td>
+        <td><%= citation_tran.fkUserKey %></td>
+        <td><%= link_to 'Show', citation_tran %></td>
+        <td><%= link_to 'Edit', edit_citation_tran_path(citation_tran) %></td>
+        <td><%= link_to 'Destroy', citation_tran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Citation tran', new_citation_tran_path %>

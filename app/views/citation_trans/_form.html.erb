@@ -1,0 +1,37 @@
+<%= form_for(@citation_tran) do |f| %>
+  <% if @citation_tran.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@citation_tran.errors.count, "error") %> prohibited this citation_tran from being saved:</h2>
+
+      <ul>
+      <% @citation_tran.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :transDateTime %><br>
+    <%= f.datetime_select :transDateTime %>
+  </div>
+  <div class="field">
+    <%= f.label :fkCitationKey %><br>
+    <%= f.number_field :fkCitationKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkActionKey %><br>
+    <%= f.number_field :fkActionKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkTemplateKey %><br>
+    <%= f.number_field :fkTemplateKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkUserKey %><br>
+    <%= f.number_field :fkUserKey %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

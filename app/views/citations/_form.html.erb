@@ -1,0 +1,57 @@
+<%= form_for(@citation) do |f| %>
+  <% if @citation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@citation.errors.count, "error") %> prohibited this citation from being saved:</h2>
+
+      <ul>
+      <% @citation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :citationNum %><br>
+    <%= f.number_field :citationNum %>
+  </div>
+  <div class="field">
+    <%= f.label :violationDateTime %><br>
+    <%= f.datetime_select :violationDateTime %>
+  </div>
+  <div class="field">
+    <%= f.label :violationNum %><br>
+    <%= f.number_field :violationNum %>
+  </div>
+  <div class="field">
+    <%= f.label :alarmRegistered %><br>
+    <%= f.text_field :alarmRegistered %>
+  </div>
+  <div class="field">
+    <%= f.label :fkAcctOwnerKey %><br>
+    <%= f.number_field :fkAcctOwnerKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkStatusKey %><br>
+    <%= f.number_field :fkStatusKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkCadAlarm %><br>
+    <%= f.number_field :fkCadAlarm %>
+  </div>
+  <div class="field">
+    <%= f.label :fkPropertyKey %><br>
+    <%= f.number_field :fkPropertyKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkAlarmKey %><br>
+    <%= f.number_field :fkAlarmKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkFaSiteTypeKey %><br>
+    <%= f.number_field :fkFaSiteTypeKey %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transDateTime: 2016-11-18 12:52:47
+  fkCitationKey: 1
+  fkActionKey: 1
+  fkTemplateKey: 1
+  fkUserKey: 1
+
+two:
+  transDateTime: 2016-11-18 12:52:47
+  fkCitationKey: 1
+  fkActionKey: 1
+  fkTemplateKey: 1
+  fkUserKey: 1

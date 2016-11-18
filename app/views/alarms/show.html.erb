@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Permitnum:</strong>
+  <%= @alarm.permitNum %>
+</p>
+
+<p>
+  <strong>Begindate:</strong>
+  <%= @alarm.beginDate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @alarm.endDate %>
+</p>
+
+<p>
+  <strong>Installdate:</strong>
+  <%= @alarm.installDate %>
+</p>
+
+<p>
+  <strong>Amtdue:</strong>
+  <%= @alarm.amtDue %>
+</p>
+
+<p>
+  <strong>Renewaldatetime:</strong>
+  <%= @alarm.renewalDateTime %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @alarm.note %>
+</p>
+
+<p>
+  <strong>Fkpropertykey:</strong>
+  <%= @alarm.fkPropertyKey %>
+</p>
+
+<p>
+  <strong>Fkacctownerkey:</strong>
+  <%= @alarm.fkAcctOwnerKey %>
+</p>
+
+<p>
+  <strong>Fkstatuskey:</strong>
+  <%= @alarm.fkStatusKey %>
+</p>
+
+<p>
+  <strong>Fkuserkey:</strong>
+  <%= @alarm.fkUserKey %>
+</p>
+
+<p>
+  <strong>Fkfasitetypekey:</strong>
+  <%= @alarm.fkFaSiteTypeKey %>
+</p>
+
+<%= link_to 'Edit', edit_alarm_path(@alarm) %> |
+<%= link_to 'Back', alarms_path %>
