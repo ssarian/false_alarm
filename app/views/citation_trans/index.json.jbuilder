@@ -1,0 +1,1 @@
+json.array! @citation_trans, partial: 'citation_trans/citation_tran', as: :citation_tran

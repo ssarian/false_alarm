@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fa Site Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Sitecode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fa_site_types.each do |fa_site_type| %>
+      <tr>
+        <td><%= fa_site_type.description %></td>
+        <td><%= fa_site_type.siteCode %></td>
+        <td><%= link_to 'Show', fa_site_type %></td>
+        <td><%= link_to 'Edit', edit_fa_site_type_path(fa_site_type) %></td>
+        <td><%= link_to 'Destroy', fa_site_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fa site type', new_fa_site_type_path %>

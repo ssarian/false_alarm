@@ -1,0 +1,1 @@
+json.partial! "citation_trans/citation_tran", citation_tran: @citation_tran

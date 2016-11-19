@@ -1,0 +1,21 @@
+<%= form_for(@incident_alarm) do |f| %>
+  <% if @incident_alarm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incident_alarm.errors.count, "error") %> prohibited this incident_alarm from being saved:</h2>
+
+      <ul>
+      <% @incident_alarm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :importDateTime %><br>
+    <%= f.datetime_select :importDateTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

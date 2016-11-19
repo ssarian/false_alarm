@@ -1,0 +1,1 @@
+json.array! @account_owners, partial: 'account_owners/account_owner', as: :account_owner

@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  resources :portals
-  resources :homes
+  resources :citations
+  resources :logins
+  resources :users
+  resources :notices
+  resources :citation_trans
+  resources :actions
+  resources :payments
+  resources :account_owners
+  resources :statuses
+  resources :fa_site_types
+  resources :properties
+  resources :alarms
+  resources :incident_alarms
+  resources :incidents
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'homes#Home'
@@ -8,10 +20,14 @@ Rails.application.routes.draw do
   get '/Permits' => 'homes#Permits'
   get '/Properties' => 'homes#Properties'
   get '/Accounts' => 'homes#Accounts'
+  get '/CADList' => 'homes#CADList'
+  get '/Reports' => 'homes#Reports'
+  get '/Logs' => 'homes#Logs'
+  get '/Preferences' => 'homes#Preferences'
 
 
   # You can have the root of your site routed with "root"
-
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

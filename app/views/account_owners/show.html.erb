@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Acctnum:</strong>
+  <%= @account_owner.acctNum %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @account_owner.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @account_owner.lastName %>
+</p>
+
+<p>
+  <strong>Middlename:</strong>
+  <%= @account_owner.middleName %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @account_owner.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @account_owner.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @account_owner.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @account_owner.zip %>
+</p>
+
+<p>
+  <strong>Homephone:</strong>
+  <%= @account_owner.homePhone %>
+</p>
+
+<p>
+  <strong>Workphone:</strong>
+  <%= @account_owner.workPhone %>
+</p>
+
+<p>
+  <strong>Cellphone:</strong>
+  <%= @account_owner.cellphone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @account_owner.email %>
+</p>
+
+<%= link_to 'Edit', edit_account_owner_path(@account_owner) %> |
+<%= link_to 'Back', account_owners_path %>
