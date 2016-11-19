@@ -41,45 +41,48 @@
 <%= yield %>
 <br><br>
 <center>
-<div id="divMain">
-  <div id="divHeader">
-  </div>
-  <div id="divMenu">
-    <ul id="cssdropdown">
-      <li class="headlink">
-        <a href="#">P.A.P</a>
-        <ul>
-          <li><a href="homes#Permits">Permits</a></li>
-          <li><a href="http://localhost:3000/Accounts">Accounts</a></li>
-          <li><a href="http://localhost:3000/Properties">Properties</a></li>
-        </ul>
-      </li>
-      <li class="headlink">
-      <a href="http://localhost:3000/CADList">CAD List</a>
-      <ul>
+  <div id="divMain">
+    <div id="divHeader">
+    </div>
+    <div id="divMenu">
+      <ul id="cssdropdown">
+        <li class="headlink">
+          <a href="#">P.A.P</a>
+          <ul>
+            <li><a href="homes#Permits">Permits</a></li>
+            <li><a href="http://localhost:3000/Accounts">Accounts</a></li>
+            <li><a href="http://localhost:3000/Properties">Properties</a></li>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/CADList">CAD List</a>
+          <ul>
+          </ul>
+        <li class="headlink">
+          <a href="http://localhost:3000/Reports">Reports</a>
+          <ul>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/Logs">Logs</a>
+          <ul>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/Preferences">Preferences</a>
+          <ul>
+          </ul>
+        </li>
       </ul>
-      <li class="headlink">
-        <a href="http://localhost:3000/Reports">Reports</a>
-        <ul>
-        </ul>
-      </li>
-      <li class="headlink">
-        <a href="http://localhost:3000/Logs">Logs</a>
-        <ul>
-        </ul>
-      </li>
-      <li class="headlink">
-        <a href="http://localhost:3000/Preferences">Preferences</a>
-        <ul>
-        </ul>
-      </li>
-    </ul>
+    </div>
   </div>
-</div>
 
-<div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
+  <div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
 </center>
-<h5></h5>
+<br>
+<br>
+<br>
+<h1> Coming Soon!</h1>
 </body>
 
 </html>
