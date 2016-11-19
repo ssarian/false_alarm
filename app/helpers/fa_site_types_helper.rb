@@ -1,0 +1,2 @@
+module FaSiteTypesHelper
+end

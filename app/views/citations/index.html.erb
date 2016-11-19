@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Citations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Citationnum</th>
+      <th>Violationdatetime</th>
+      <th>Violationnum</th>
+      <th>Alarmregistered</th>
+      <th>Fkacctownerkey</th>
+      <th>Fkstatuskey</th>
+      <th>Fkcadalarm</th>
+      <th>Fkpropertykey</th>
+      <th>Fkalarmkey</th>
+      <th>Fkfasitetypekey</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @citations.each do |citation| %>
+      <tr>
+        <td><%= citation.citationNum %></td>
+        <td><%= citation.violationDateTime %></td>
+        <td><%= citation.violationNum %></td>
+        <td><%= citation.alarmRegistered %></td>
+        <td><%= citation.fkAcctOwnerKey %></td>
+        <td><%= citation.fkStatusKey %></td>
+        <td><%= citation.fkCadAlarm %></td>
+        <td><%= citation.fkPropertyKey %></td>
+        <td><%= citation.fkAlarmKey %></td>
+        <td><%= citation.fkFaSiteTypeKey %></td>
+        <td><%= link_to 'Show', citation %></td>
+        <td><%= link_to 'Edit', edit_citation_path(citation) %></td>
+        <td><%= link_to 'Destroy', citation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Citation', new_citation_path %>

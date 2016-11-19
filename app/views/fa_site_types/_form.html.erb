@@ -1,0 +1,25 @@
+<%= form_for(@fa_site_type) do |f| %>
+  <% if @fa_site_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fa_site_type.errors.count, "error") %> prohibited this fa_site_type from being saved:</h2>
+
+      <ul>
+      <% @fa_site_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :siteCode %><br>
+    <%= f.text_area :siteCode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

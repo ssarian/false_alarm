@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incidentnum:</strong>
+  <%= @incident.incidentNum %>
+</p>
+
+<p>
+  <strong>Incidentdatetime:</strong>
+  <%= @incident.incidentDateTime %>
+</p>
+
+<p>
+  <strong>Permitnum:</strong>
+  <%= @incident.permitNum %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @incident.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @incident.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @incident.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @incident.zip %>
+</p>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

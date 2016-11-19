@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  propertyName: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  fkAcctOwner: 1
+
+two:
+  propertyName: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  fkAcctOwner: 1

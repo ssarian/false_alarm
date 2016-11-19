@@ -1,0 +1,65 @@
+<%= form_for(@alarm) do |f| %>
+  <% if @alarm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alarm.errors.count, "error") %> prohibited this alarm from being saved:</h2>
+
+      <ul>
+      <% @alarm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :permitNum %><br>
+    <%= f.number_field :permitNum %>
+  </div>
+  <div class="field">
+    <%= f.label :beginDate %><br>
+    <%= f.date_select :beginDate %>
+  </div>
+  <div class="field">
+    <%= f.label :endDate %><br>
+    <%= f.date_select :endDate %>
+  </div>
+  <div class="field">
+    <%= f.label :installDate %><br>
+    <%= f.date_select :installDate %>
+  </div>
+  <div class="field">
+    <%= f.label :amtDue %><br>
+    <%= f.text_field :amtDue %>
+  </div>
+  <div class="field">
+    <%= f.label :renewalDateTime %><br>
+    <%= f.datetime_select :renewalDateTime %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :fkPropertyKey %><br>
+    <%= f.number_field :fkPropertyKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkAcctOwnerKey %><br>
+    <%= f.number_field :fkAcctOwnerKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkStatusKey %><br>
+    <%= f.number_field :fkStatusKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkUserKey %><br>
+    <%= f.number_field :fkUserKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkFaSiteTypeKey %><br>
+    <%= f.number_field :fkFaSiteTypeKey %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  permitNum: 1
+  beginDate: 2016-11-19
+  endDate: 2016-11-19
+  installDate: 2016-11-19
+  amtDue: 1.5
+  renewalDateTime: 2016-11-19 14:40:24
+  note: MyText
+  fkPropertyKey: 1
+  fkAcctOwnerKey: 1
+  fkStatusKey: 1
+  fkUserKey: 1
+  fkFaSiteTypeKey: 1
+
+two:
+  permitNum: 1
+  beginDate: 2016-11-19
+  endDate: 2016-11-19
+  installDate: 2016-11-19
+  amtDue: 1.5
+  renewalDateTime: 2016-11-19 14:40:24
+  note: MyText
+  fkPropertyKey: 1
+  fkAcctOwnerKey: 1
+  fkStatusKey: 1
+  fkUserKey: 1
+  fkFaSiteTypeKey: 1

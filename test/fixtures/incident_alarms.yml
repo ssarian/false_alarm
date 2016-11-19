@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  importDateTime: 2016-11-19 14:40:05
+
+two:
+  importDateTime: 2016-11-19 14:40:05

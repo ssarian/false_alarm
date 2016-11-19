@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transdatetime:</strong>
+  <%= @citation_tran.transDateTime %>
+</p>
+
+<p>
+  <strong>Fkcitationkey:</strong>
+  <%= @citation_tran.fkCitationKey %>
+</p>
+
+<p>
+  <strong>Fkactionkey:</strong>
+  <%= @citation_tran.fkActionKey %>
+</p>
+
+<p>
+  <strong>Fktemplatekey:</strong>
+  <%= @citation_tran.fkTemplateKey %>
+</p>
+
+<p>
+  <strong>Fkuserkey:</strong>
+  <%= @citation_tran.fkUserKey %>
+</p>
+
+<%= link_to 'Edit', edit_citation_tran_path(@citation_tran) %> |
+<%= link_to 'Back', citation_trans_path %>

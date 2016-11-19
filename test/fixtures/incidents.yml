@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incidentNum: 1
+  incidentDateTime: 2016-11-19 14:39:46
+  permitNum: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+
+two:
+  incidentNum: 1
+  incidentDateTime: 2016-11-19 14:39:46
+  permitNum: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString

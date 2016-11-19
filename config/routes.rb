@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :citations
+  resources :logins
+  resources :users
+  resources :notices
+  resources :citation_trans
+  resources :actions
+  resources :payments
+  resources :account_owners
+  resources :statuses
+  resources :fa_site_types
+  resources :properties
+  resources :alarms
+  resources :incident_alarms
+  resources :incidents
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'homes#Home'

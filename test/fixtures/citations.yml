@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  citationNum: 1
+  violationDateTime: 2016-11-19 14:45:58
+  violationNum: 1
+  alarmRegistered: MyString
+  fkAcctOwnerKey: 1
+  fkStatusKey: 1
+  fkCadAlarm: 1
+  fkPropertyKey: 1
+  fkAlarmKey: 1
+  fkFaSiteTypeKey: 1
+
+two:
+  citationNum: 1
+  violationDateTime: 2016-11-19 14:45:58
+  violationNum: 1
+  alarmRegistered: MyString
+  fkAcctOwnerKey: 1
+  fkStatusKey: 1
+  fkCadAlarm: 1
+  fkPropertyKey: 1
+  fkAlarmKey: 1
+  fkFaSiteTypeKey: 1
