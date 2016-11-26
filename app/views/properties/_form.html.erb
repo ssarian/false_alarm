@@ -32,8 +32,8 @@
     <%= f.text_field :zip %>
   </div>
   <div class="field">
-    <%= f.label :fkAcctOwner %><br>
-    <%= f.number_field :fkAcctOwner %>
+    <%= f.label :account_owner_ID, "Account Owner Name" %><br>
+    <%= f.collection_select :fkAcctOwner, AccountOwner.all, :id, :firstName%>
   </div>
   <div class="actions">
     <%= f.submit %>
