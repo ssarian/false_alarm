@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   has_many :account_owners
   has_many :alarms
   has_many :users
+  has_many :permits
 end

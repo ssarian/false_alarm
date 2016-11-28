@@ -11,6 +11,7 @@ class CreateCitations < ActiveRecord::Migration
       t.integer :fkPropertyKey
       t.integer :fkAlarmKey
       t.integer :fkFaSiteTypeKey
+      t.integer :fkStatusKey
 
       t.timestamps null: false
     end

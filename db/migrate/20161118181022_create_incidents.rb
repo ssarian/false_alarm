@@ -3,7 +3,8 @@ class CreateIncidents < ActiveRecord::Migration
     create_table :incidents do |t|
       t.integer :incidentNum
       t.datetime :incidentDateTime
-      t.integer :permitNum
+      t.string :alarmType  #dropdown of valid or false alarm
+      t.integer :permitNum  #dropdown of permitIDs and Property Name
       t.string :address
       t.string :city
       t.string :state, limit: 2

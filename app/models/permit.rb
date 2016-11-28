@@ -1,6 +1,7 @@
 class Permit < ActiveRecord::Base
-  has_many :properties
+  belongs_to :property
   has_many :alarms
-  has_many :users
+  belongs_to :user
   has_many :payments
+  belongs_to :status
 end
