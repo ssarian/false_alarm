@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  permitNum: 1
+  permitType: MyString
+  permitStartDate: 2016-11-28
+  permitExpDate: 2016-11-28
+  fkPropertyKey: 1
+  fkAlarmKey: 1
+  fkUserKey: 1
+  fkPaymentKey: 1
+
+two:
+  permitNum: 1
+  permitType: MyString
+  permitStartDate: 2016-11-28
+  permitExpDate: 2016-11-28
+  fkPropertyKey: 1
+  fkAlarmKey: 1
+  fkUserKey: 1
+  fkPaymentKey: 1

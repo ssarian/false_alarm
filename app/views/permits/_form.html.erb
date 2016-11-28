@@ -1,0 +1,55 @@
+<%= form_for(@permit) do |f| %>
+  <% if @permit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@permit.errors.count, "error") %> prohibited this permit from being saved:</h2>
+
+      <ul>
+      <% @permit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :permitType, "Permit Type" %><br>
+    <%= f.select :permitType, ['Fire Permit']%>
+
+  </div>
+  <div class="field">
+    <%= f.label :permitStartDate, "Permit Start Date" %><br>
+    <%= f.date_select :permitStartDate %>
+  </div>
+  <div class="field">
+    <%= f.label :permitExpDate, "Permit Expiration Date" %><br>
+    <%= f.date_select :permitExpDate %>
+  </div>
+  <div class="field">
+    <%= f.label :propertyID, "Property Name" %><br>
+    <%= f.collection_select :fkPropertyKey, Property.all, :id, :propertyName%>
+  </div>
+
+
+
+
+
+
+    <% if false %>
+  <div class="field">
+   <%= f.label :fkAlarmKey %><br>
+    <%= f.number_field :fkAlarmKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkUserKey %><br>
+    <%= f.number_field :fkUserKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkPaymentKey %><br>
+    <%= f.number_field :fkPaymentKey %>
+  </div>
+    <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

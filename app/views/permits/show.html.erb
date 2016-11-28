@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Permitnum:</strong>
+  <%= @permit.permitNum %>
+</p>
+
+<p>
+  <strong>Permittype:</strong>
+  <%= @permit.permitType %>
+</p>
+
+<p>
+  <strong>Permitstartdate:</strong>
+  <%= @permit.permitStartDate %>
+</p>
+
+<p>
+  <strong>Permitexpdate:</strong>
+  <%= @permit.permitExpDate %>
+</p>
+
+<p>
+  <strong>Fkpropertykey:</strong>
+  <%= @permit.fkPropertyKey %>
+</p>
+
+<p>
+  <strong>Fkalarmkey:</strong>
+  <%= @permit.fkAlarmKey %>
+</p>
+
+<p>
+  <strong>Fkuserkey:</strong>
+  <%= @permit.fkUserKey %>
+</p>
+
+<p>
+  <strong>Fkpaymentkey:</strong>
+  <%= @permit.fkPaymentKey %>
+</p>
+
+<%= link_to 'Edit', edit_permit_path(@permit) %> |
+<%= link_to 'Back', permits_path %>
