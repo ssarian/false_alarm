@@ -13,8 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :officePhone
       t.string :officeExt
       t.string :cellPhone
-      t.string :email
-
+      t.string :email,              null: false, default: ""
       t.timestamps null: false
     end
   end

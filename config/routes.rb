@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :citations
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   resources :incidents
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root 'homes#Home'
+  root :to => 'admin/dashboard#index'
   get '/Home' => 'homes#HomePage'
   get '/Permits' => 'homes#Permits'
   get '/Properties' => 'homes#Properties'

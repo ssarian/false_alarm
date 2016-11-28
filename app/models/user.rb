@@ -1,3 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :citations, :citation_trans, :payments, :account_owners, :alarms, :users
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end
