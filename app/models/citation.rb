@@ -1,4 +1,9 @@
 class Citation < ActiveRecord::Base
   has_many :citation_transactions
-  belongs_to :account_owner, :property, :fa_site_type, :status, :user, :incident_alarm
+  belongs_to :account_owner
+  belongs_to :property
+  belongs_to :fa_site_type
+  belongs_to :status
+  belongs_to :user
+  belongs_to :incident_alarm
 end

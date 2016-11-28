@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118185633) do
+ActiveRecord::Schema.define(version: 20161128171128) do
 
   create_table "account_owners", force: :cascade do |t|
     t.integer  "acctNum",    limit: 4
@@ -131,6 +131,19 @@ ActiveRecord::Schema.define(version: 20161118185633) do
     t.integer  "fkPropertyKey",   limit: 4
     t.integer  "fkAlarmKey",      limit: 4
     t.integer  "fkUserKey",       limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "permits", force: :cascade do |t|
+    t.integer  "permitNum",       limit: 4
+    t.string   "permitType",      limit: 255
+    t.date     "permitStartDate"
+    t.date     "permitExpDate"
+    t.integer  "fkPropertyKey",   limit: 4
+    t.integer  "fkAlarmKey",      limit: 4
+    t.integer  "fkUserKey",       limit: 4
+    t.integer  "fkPaymentKey",    limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end

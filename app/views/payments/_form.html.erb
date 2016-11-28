@@ -12,16 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :amount %><br>
+    <%= f.label :amount, "Amount" %><br>
     <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :paymentDateTime %><br>
+    <%= f.label :paymentDateTime, "Payment Date" %><br>
     <%= f.datetime_select :paymentDateTime %>
   </div>
   <div class="field">
     <%= f.label :paymentType %><br>
     <%= f.text_field :paymentType %>
+    <%= f.select :permitType, ['Permit','Fee','Fine']%>
   </div>
   <div class="field">
     <%= f.label :fkActionKey %><br>
