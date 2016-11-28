@@ -135,6 +135,11 @@ ActiveRecord::Schema.define(version: 20161118185633) do
     t.datetime "updated_at",                  null: false
   end
 
+  create_table "portals", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string   "propertyName", limit: 255
     t.string   "address",      limit: 255

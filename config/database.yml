@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: root
+  password:
   host: localhost
 
 development:
@@ -47,8 +47,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: false_alarm_production
-  username: false_alarm
-  password: <%= ENV['FALSE_ALARM_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  database: false_alarm_production
+#  username: false_alarm
+#  password: <%= ENV['FALSE_ALARM_DATABASE_PASSWORD'] %>
