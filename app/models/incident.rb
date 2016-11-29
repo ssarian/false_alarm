@@ -1,6 +1,5 @@
 class Incident < ActiveRecord::Base
   has_many :incident_alarms
-  validates :incidentNum, :presence => true
   validates :incidentDateTime, :presence => true
   validates :permitNum, :presence => true
   validates :address, :presence => true

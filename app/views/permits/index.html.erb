@@ -5,13 +5,14 @@
 <table>
   <thead>
     <tr>
-      <th>Permitnum</th>
-      <th>Permitstartdate</th>
-      <th>Permitexpdate</th>
-      <th>Fkpropertykey</th>
-      <th>Fkalarmkey</th>
-      <th>Fkuserkey</th>
-      <th>Fkpaymentkey</th>
+      <th>Permit Number</th>
+      <th>Permit Start Date</th>
+      <th>Permit Exp Date</th>
+      <th>Permit Status</th>
+      <th>Property</th>
+      <th>Site Type</th>
+      <th>Notes</th>
+      <th>Amount Due</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,13 +20,14 @@
   <tbody>
     <% @permits.each do |permit| %>
       <tr>
-        <td><%= permit.permitNum %></td>
+        <td><%= permit.id %></td>
         <td><%= permit.permitStartDate %></td>
         <td><%= permit.permitExpDate %></td>
+        <td><%= permit.fkStatusKey %></td>
         <td><%= permit.fkPropertyKey %></td>
-        <td><%= permit.fkAlarmKey %></td>
-        <td><%= permit.fkUserKey %></td>
-        <td><%= permit.fkPaymentKey %></td>
+        <td><%= permit.siteType %></td>
+        <td><%= permit.note %></td>
+        <td><%= permit.amountDue %></td>
         <td><%= link_to 'Show', permit %></td>
         <td><%= link_to 'Edit', edit_permit_path(permit) %></td>
         <td><%= link_to 'Destroy', permit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
