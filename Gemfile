@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 gem 'activeadmin', '~> 1.0.0.pre1'
+gem "active_admin_import" , '3.0.0.pre'
 #gem "meta_search", '>= 1.1.0.pre'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

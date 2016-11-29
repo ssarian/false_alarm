@@ -10,10 +10,6 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    action_item :only => :index do
-      link_to 'Upload CSV', :action => 'upload_csv'
-    end
-
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
