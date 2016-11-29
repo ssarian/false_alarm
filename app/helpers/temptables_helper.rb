@@ -1,0 +1,2 @@
+module TemptablesHelper
+end

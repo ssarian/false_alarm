@@ -1,0 +1,1 @@
+json.partial! "temptables/temptable", temptable: @temptable

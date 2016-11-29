@@ -1,0 +1,1 @@
+json.array! @temptables, partial: 'temptables/temptable', as: :temptable
