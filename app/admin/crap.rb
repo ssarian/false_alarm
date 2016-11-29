@@ -1,4 +1,4 @@
-#ActiveAdmin.register Post do
+ActiveAdmin.register Crap do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -14,4 +14,4 @@
 # end
 
 
-#end
+end
