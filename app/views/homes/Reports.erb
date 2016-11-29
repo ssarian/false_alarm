@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<title></title>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<script type="text/javascript" src="..\Libraries\jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('li.headlink').hover(
+        function() { $('ul', this).css('display', 'block'); },
+        function() { $('ul', this).css('display', 'none'); });
+  });
+</script>
+<style type="text/css" rel="stylesheet">
+  /* General */
+  #cssdropdown, #cssdropdown ul { list-style: none; }
+  #cssdropdown, #cssdropdown * { padding: 0; margin: 0; }
+
+  /* Head links */
+  #cssdropdown li.headlink { width: 220px; float: left; margin-left: -1px; border: 1px black solid; background-color: #e9e9e9; text-align: center; }
+  #cssdropdown li.headlink a { display: block; padding: 15px; }
+
+  /* Child lists and links */
+  #cssdropdown li.headlink ul { display: none; border-top: 1px black solid; text-align: left; }
+  #cssdropdown li.headlink:hover ul { display: block; }
+  #cssdropdown li.headlink ul li a { padding: 5px; height: 17px; }
+  #cssdropdown li.headlink ul li a:hover { background-color: LightBlue; color:Black }
+  /* Pretty styling */
+  body { font-family: verdana, arial, sans-serif; font-size: 0.8em;}
+  #cssdropdown a { color: white; } #cssdropdown ul li a:hover { text-decoration: none; }
+  #cssdropdown li.headlink { background-color: Gray;}
+  #cssdropdown li.headlink ul { background-position: bottom; padding-bottom: 10px; }
+</style>
+</head>
+<body style="background-color:CornSilk;">
+<h1> &nbsp   &nbsp &nbsp   &nbsp HFD<br><br>Smart CM 2.0</h1>
+<%= yield %>
+<br><br>
+<center>
+  <div id="divMain">
+    <div id="divHeader">
+    </div>
+    <div id="divMenu">
+      <ul id="cssdropdown">
+        <li class="headlink">
+          <a href="#">P.A.P</a>
+          <ul>
+            <li><a href="#">Permits</a></li>
+            <li><a href="#">Accounts</a></li>
+            <li><a href="#">Properties</a></li>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/CADList">CAD List</a>
+          <ul>
+          </ul>
+        <li class="headlink">
+          <a href="http://localhost:3000/Reports">Reports</a>
+          <ul>
+            <li><a href="#">Citation Reports</a></li>
+            <li><a href="#">Permit Reports</a></li>
+            <li><a href="#">Invoice Reports</a></li>
+            <li><a href="#">Payment Totals</a></li>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/Logs">Logs</a>
+          <ul>
+          </ul>
+        </li>
+        <li class="headlink">
+          <a href="http://localhost:3000/Preferences">Preferences</a>
+          <ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
+</center>
+<br>
+<br>
+<br>
+<h3>Coming Soon!
+  </h3>
+</body>
+
+</html>

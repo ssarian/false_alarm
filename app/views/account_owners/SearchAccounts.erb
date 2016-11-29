@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart CM 2.0</title>
+
+</head>
+<body>
+<%= form_tag(@account_owner, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Accounts" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+<% if @account_owner.present? %>
+    <%= render @account_owner %>
+<% else %>
+    <p>There are no Owners containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
+</body>
+</html>

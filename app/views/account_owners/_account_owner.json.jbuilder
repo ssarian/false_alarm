@@ -1,0 +1,2 @@
+json.extract! account_owner, :id, :acctNum, :firstName, :lastName, :middleName, :address, :city, :state, :zip, :homePhone, :workPhone, :cellphone, :email, :created_at, :updated_at
+json.url account_owner_url(account_owner, format: :json)

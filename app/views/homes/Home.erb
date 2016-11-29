@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart CM 2.0</title>
+  <h1><font size="50"><center>Welcome to Smart CM 2.0</center></font></h1>
+</head>
+<body>
+<br><br><br><br><br><br>
+<img src="assets/Logo.png" alt="HFD" style="width:250px;height:250px;"/>
+<form name="login">
+
+ <center>Username&nbsp<input type="text" name="userid" placeholder="Nathan"/><br>
+  Password &nbsp<input type="password" name="pswrd" placeholder="CMSmart"/><br><br>
+   &nbsp   &nbsp   &nbsp   &nbsp    &nbsp   &nbsp   &nbsp
+   &nbsp   &nbsp   &nbsp   &nbsp   &nbsp    &nbsp   &nbsp
+   <input type="button" onclick="check(this.form)" value="Login"/>
+  <input type="reset" value="Clear"/>
+   </center>
+</form>
+<script language="javascript">
+  function check(form) { /*function to check userid & password*/
+    /*the following code checkes whether the entered userid and password are matching*/
+    if(form.userid.value == "Nathan" && form.pswrd.value == "CMSmart") {
+      window.location.href="Home"/*opens the target page while Id & password matches*/
+    }
+    else if(form.userid.value == "Sam" && form.pswrd.value == "SamIAm") {
+      window.location.href="portal"/*opens the target page while Id & password matches*/
+    }
+    else {
+      alert("Error Password or Username")/*displays error message*/
+    }
+  }
+</script>
+
+</body>
+</html>

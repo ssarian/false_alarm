@@ -1,0 +1,1 @@
+json.array! @incident_alarms, partial: 'incident_alarms/incident_alarm', as: :incident_alarm

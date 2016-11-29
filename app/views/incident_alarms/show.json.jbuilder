@@ -1,0 +1,1 @@
+json.partial! "incident_alarms/incident_alarm", incident_alarm: @incident_alarm

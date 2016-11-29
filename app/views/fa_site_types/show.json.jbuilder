@@ -1,0 +1,1 @@
+json.partial! "fa_site_types/fa_site_type", fa_site_type: @fa_site_type

@@ -1,0 +1,51 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount, "Amount" %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :paymentDateTime, "Payment Date" %><br>
+    <%= f.datetime_select :paymentDateTime %>
+  </div>
+  <div class="field">
+    <%= f.label :paymentType, "Payment Type" %><br>
+    <%= f.select :paymentType, ['Permit','Fee','Fine']%>
+  </div>
+    <div class="field">
+      <%= f.label :fkPropertyKey, "Property" %><br>
+      <%= f.collection_select :fkPropertyKey, Property.all, :id, :Name, include_blank: true %>
+    </div>
+    <% if false %>
+  <div class="field">
+    <%= f.label :fkActionKey %><br>
+    <%= f.number_field :fkActionKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkCitationkey %><br>
+    <%= f.number_field :fkCitationkey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkAlarmKey %><br>
+    <%= f.number_field :fkAlarmKey %>
+  </div>
+  <div class="field">
+    <%= f.label :fkUserKey %><br>
+    <%= f.number_field :fkUserKey %>
+  </div>
+    <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
