@@ -12,9 +12,6 @@
   <% end %>
 
 
-  <div class="field">
-    <%= f.label :permitType, "Permit Type" %><br>
-    <%= f.select :permitType, ['Fire Permit']%>
 
   </div>
   <div class="field">
@@ -29,27 +26,24 @@
     <%= f.label :propertyID, "Property Name" %><br>
     <%= f.collection_select :fkPropertyKey, Property.all, :id, :propertyName%>
   </div>
+    <div class="field">
+      <%= f.label :statusID, "Status" %><br>
+      <%= f.collection_select :fkStatusKey, Status.all, :id, :description%>
+    </div>
 
 
-
-
-
-
-
-    <% if false %>
   <div class="field">
-   <%= f.label :fkAlarmKey %><br>
-    <%= f.number_field :fkAlarmKey %>
+    <%= f.label :siteType, "Site Type" %><br>
+    <%= f.select :siteType, ['Site A','Site B','Site C']%>
   </div>
   <div class="field">
-    <%= f.label :fkUserKey %><br>
-    <%= f.number_field :fkUserKey %>
+    <%= f.label :note, "Notes" %><br>
+    <%= f.text_field :note %>
   </div>
   <div class="field">
-    <%= f.label :fkPaymentKey %><br>
-    <%= f.number_field :fkPaymentKey %>
+    <%= f.label :amountDue, "Amount Due" %><br>
+    <%= f.number_field :amountDue %>
   </div>
-    <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

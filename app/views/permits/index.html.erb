@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Permitnum</th>
-      <th>Permittype</th>
       <th>Permitstartdate</th>
       <th>Permitexpdate</th>
       <th>Fkpropertykey</th>
@@ -21,7 +20,6 @@
     <% @permits.each do |permit| %>
       <tr>
         <td><%= permit.permitNum %></td>
-        <td><%= permit.permitType %></td>
         <td><%= permit.permitStartDate %></td>
         <td><%= permit.permitExpDate %></td>
         <td><%= permit.fkPropertyKey %></td>
@@ -39,3 +37,4 @@
 <br>
 
 <%= link_to 'New Permit', new_permit_path %>
+<a href=http://localhost:3000/Home>Back</a>

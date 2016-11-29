@@ -9,4 +9,8 @@ class Property < ActiveRecord::Base
   validates :state, format: { with: /\A[a-zA-Z]+\z/}, length: { maximum: 2, minimum: 2}, :presence => true
   validates :zip, numericality: true, length: {maximum:5, minimum: 5}, :presence => true
 
+
+  def Name
+    "#{id} #{propertyName}".strip
+  end
 end
