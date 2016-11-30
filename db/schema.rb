@@ -176,16 +176,16 @@ ActiveRecord::Schema.define(version: 20161129194139) do
     t.integer  "permitNum",       limit: 4
     t.date     "permitStartDate"
     t.date     "permitExpDate"
-    t.integer  "amountDue",       limit: 4
-    t.string   "siteType",        limit: 255
-    t.string   "note",            limit: 255
     t.integer  "fkPropertyKey",   limit: 4
     t.integer  "fkAlarmKey",      limit: 4
     t.integer  "fkUserKey",       limit: 4
     t.integer  "fkPaymentKey",    limit: 4
-    t.integer  "fkStatusKey",     limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "amountDue",       limit: 4
+    t.string   "siteType",        limit: 255
+    t.string   "note",            limit: 255
+    t.integer  "fkStatusKey",     limit: 4
   end
 
   create_table "portals", force: :cascade do |t|
