@@ -25,6 +25,7 @@ ActiveAdmin.register Property do
     filter :city
     filter :state
     filter :zip
+    filter :fkAcctOwner
 
     form do |f|
       f.inputs "Account Details" do
@@ -33,6 +34,7 @@ ActiveAdmin.register Property do
         f.input :city
         f.input :state
         f.input :zip
+        f.input :fkAcctOwner, as: :select, :collection => AccountOwner.all.map{|u| ["#{u.id}, #{u.firstName}", u.id]}
 
       end
       f.actions

@@ -28,8 +28,13 @@ ActiveAdmin.register Incident do
   form do |f|
     f.inputs "Account Details" do
       f.input :incidentDateTime
-      f.input :alarmType
-      f.input :permitNum
+      f.input :alarmType, as: :select, collection:['FALSE ALARM','VALID ALARM']
+
+
+        f.input :permitNum, as: :select, :collection => Property.all.map{|u| ["#{u.id}, #{u.propertyName}", u.id]}
+     # f.collection_select :permitNum, Property.all, :id, :Name, include_blank: true
+
+
       f.input :address
       f.input :city
       f.input :state

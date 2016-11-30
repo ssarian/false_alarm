@@ -26,7 +26,7 @@ ActiveAdmin.register Payment do
     f.inputs "Account Details" do
       f.input :amount
       f.input :paymentDateTime
-      f.input :paymentType
+      f.input :paymentType, as: :select, collection:['Permit','Fee','Fine']
       f.input :fkPropertyKey
 
 
