@@ -12,17 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :amount %><br>
+    <%= f.label :amount, "Amount" %><br>
     <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :paymentDateTime %><br>
+    <%= f.label :paymentDateTime, "Payment Date" %><br>
     <%= f.datetime_select :paymentDateTime %>
   </div>
   <div class="field">
-    <%= f.label :paymentType %><br>
-    <%= f.text_field :paymentType %>
+    <%= f.label :paymentType, "Payment Type" %><br>
+    <%= f.select :paymentType, ['Permit','Fee','Fine']%>
   </div>
+    <div class="field">
+      <%= f.label :fkPropertyKey, "Property" %><br>
+      <%= f.collection_select :fkPropertyKey, Property.all, :id, :Name, include_blank: true %>
+    </div>
+    <% if false %>
   <div class="field">
     <%= f.label :fkActionKey %><br>
     <%= f.number_field :fkActionKey %>
@@ -32,10 +37,6 @@
     <%= f.number_field :fkCitationkey %>
   </div>
   <div class="field">
-    <%= f.label :fkPropertyKey %><br>
-    <%= f.number_field :fkPropertyKey %>
-  </div>
-  <div class="field">
     <%= f.label :fkAlarmKey %><br>
     <%= f.number_field :fkAlarmKey %>
   </div>
@@ -43,6 +44,7 @@
     <%= f.label :fkUserKey %><br>
     <%= f.number_field :fkUserKey %>
   </div>
+    <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

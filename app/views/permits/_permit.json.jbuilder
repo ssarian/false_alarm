@@ -1,0 +1,2 @@
+json.extract! permit, :id, :permitNum, :permitType, :permitStartDate, :permitExpDate, :fkPropertyKey, :fkAlarmKey, :fkUserKey, :fkPaymentKey, :created_at, :updated_at
+json.url permit_url(permit, format: :json)

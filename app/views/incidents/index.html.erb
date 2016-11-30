@@ -8,6 +8,7 @@
       <th>Incidentnum</th>
       <th>Incidentdatetime</th>
       <th>Permitnum</th>
+      <th>AlarmType</th>
       <th>Address</th>
       <th>City</th>
       <th>State</th>
@@ -19,9 +20,10 @@
   <tbody>
     <% @incidents.each do |incident| %>
       <tr>
-        <td><%= incident.incidentNum %></td>
+        <td><%= incident.id %></td>
         <td><%= incident.incidentDateTime %></td>
         <td><%= incident.permitNum %></td>
+        <td><%= incident.alarmType %></td>
         <td><%= incident.address %></td>
         <td><%= incident.city %></td>
         <td><%= incident.state %></td>
@@ -37,3 +39,4 @@
 <br>
 
 <%= link_to 'New Incident', new_incident_path %>
+<a href=http://localhost:3000/Home>Back</a>

@@ -6,4 +6,7 @@ class Citation < ActiveRecord::Base
   belongs_to :status
   belongs_to :user
   belongs_to :incident_alarm
+  has_many :notices
+  belongs_to :status
+  belongs_to :permit
 end

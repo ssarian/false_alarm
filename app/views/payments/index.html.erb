@@ -5,14 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>Paymentnum</th>
       <th>Amount</th>
       <th>Paymentdatetime</th>
       <th>Paymenttype</th>
-      <th>Fkactionkey</th>
-      <th>Fkcitationkey</th>
       <th>Fkpropertykey</th>
-      <th>Fkalarmkey</th>
-      <th>Fkuserkey</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +18,11 @@
   <tbody>
     <% @payments.each do |payment| %>
       <tr>
+        <td><%= payment.id %></td>
         <td><%= payment.amount %></td>
         <td><%= payment.paymentDateTime %></td>
         <td><%= payment.paymentType %></td>
-        <td><%= payment.fkActionKey %></td>
-        <td><%= payment.fkCitationkey %></td>
         <td><%= payment.fkPropertyKey %></td>
-        <td><%= payment.fkAlarmKey %></td>
-        <td><%= payment.fkUserKey %></td>
         <td><%= link_to 'Show', payment %></td>
         <td><%= link_to 'Edit', edit_payment_path(payment) %></td>
         <td><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -39,3 +34,4 @@
 <br>
 
 <%= link_to 'New Payment', new_payment_path %>
+<a href=http://localhost:3000/Home>Back</a>

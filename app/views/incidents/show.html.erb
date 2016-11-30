@@ -1,20 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Incidentnum:</strong>
-  <%= @incident.incidentNum %>
+  <strong>Incident Number:</strong>
+  <%= @incident.id %>
 </p>
 
 <p>
-  <strong>Incidentdatetime:</strong>
+  <strong>Incident Date and Time:</strong>
   <%= @incident.incidentDateTime %>
 </p>
 
 <p>
-  <strong>Permitnum:</strong>
+  <strong>Permit Number:</strong>
   <%= @incident.permitNum %>
 </p>
-
+<p>
+  <strong>Alarm Type:</strong>
+  <%= @incident.alarmType %>
+</p>
 <p>
   <strong>Address:</strong>
   <%= @incident.address %>

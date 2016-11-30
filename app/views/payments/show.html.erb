@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Paymentnum:</strong>
+  <%= @payment.id %>
+</p>
+<p>
   <strong>Amount:</strong>
   <%= @payment.amount %>
 </p>
@@ -16,29 +20,10 @@
 </p>
 
 <p>
-  <strong>Fkactionkey:</strong>
-  <%= @payment.fkActionKey %>
-</p>
-
-<p>
-  <strong>Fkcitationkey:</strong>
-  <%= @payment.fkCitationkey %>
-</p>
-
-<p>
   <strong>Fkpropertykey:</strong>
   <%= @payment.fkPropertyKey %>
 </p>
 
-<p>
-  <strong>Fkalarmkey:</strong>
-  <%= @payment.fkAlarmKey %>
-</p>
-
-<p>
-  <strong>Fkuserkey:</strong>
-  <%= @payment.fkUserKey %>
-</p>
 
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
 <%= link_to 'Back', payments_path %>

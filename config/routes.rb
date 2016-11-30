@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :permits
   resources :temptables
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
   get '/Reports' => 'homes#Reports'
   get '/Logs' => 'homes#Logs'
   get '/Preferences' => 'homes#Preferences'
+  get '/SearchAccounts' => 'account_owners#SearchAccounts'
 
 
   # You can have the root of your site routed with "root"

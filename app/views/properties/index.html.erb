@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Propertyname</th>
+      <th>Property Num</th>
+      <th>Property Name</th>
       <th>Address</th>
       <th>City</th>
       <th>State</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @properties.each do |property| %>
       <tr>
+        <td><%= property.id %></td>
         <td><%= property.propertyName %></td>
         <td><%= property.address %></td>
         <td><%= property.city %></td>
@@ -35,3 +37,4 @@
 <br>
 
 <%= link_to 'New Property', new_property_path %>
+<a href=http://localhost:3000/Home>Back</a>

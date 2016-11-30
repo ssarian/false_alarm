@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Account Owners</h1>
+
+<h1>Account Owners</h1>
 
 <table>
   <thead>
@@ -24,7 +24,7 @@
   <tbody>
     <% @account_owners.each do |account_owner| %>
       <tr>
-        <td><%= account_owner.acctNum %></td>
+        <td><%= account_owner.id %></td>
         <td><%= account_owner.firstName %></td>
         <td><%= account_owner.lastName %></td>
         <td><%= account_owner.middleName %></td>
@@ -47,3 +47,4 @@
 <br>
 
 <%= link_to 'New Account owner', new_account_owner_path %>
+<a href=http://localhost:3000/Home>Back</a>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Permit Number:</strong>
+  <%= @permit.id %>
+</p>
+<p>
+  <strong>Permit Start Date:</strong>
+  <%= @permit.permitStartDate %>
+</p>
+
+<p>
+  <strong>Permit Exp Date:</strong>
+  <%= @permit.permitExpDate %>
+</p>
+<p>
+  <strong>Status ID:</strong>
+  <%= @permit.fkStatusKey %>
+</p>
+<p>
+  <strong>Property ID:</strong>
+  <%= @permit.fkPropertyKey %>
+</p>
+<p>
+  <strong>Site Type ID:</strong>
+  <%= @permit.siteType %>
+</p>
+<p>
+  <strong>Notes:</strong>
+  <%= @permit.note %>
+</p>
+<p>
+  <strong>Amount Due:</strong>
+  <%= @permit.amountDue %>
+</p>
+
+<%= link_to 'Edit', edit_permit_path(@permit) %> |
+<%= link_to 'Back', permits_path %>
