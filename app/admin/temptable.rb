@@ -1,7 +1,7 @@
 ActiveAdmin.register Temptable do
 
 
-  active_admin_import validate: false,
+  active_admin_import validate: true,
                       template: 'import' ,
                       template_object: ActiveAdminImport::Model.new(
                           :hint => 'you can configure CSV options',
