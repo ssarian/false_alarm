@@ -1,5 +1,5 @@
 class UpdateIncidents < ActiveRecord::Migration
   def change
-    add_column :incidents, :alarmType, :string
+    #add_column :incidents, :alarmType, :string
   end
 end
